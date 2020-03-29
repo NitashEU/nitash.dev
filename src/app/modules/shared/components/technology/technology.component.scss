@@ -1,0 +1,17 @@
+:host {
+  position: relative;
+
+  > a {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+  }
+
+  > i {
+    position: absolute;
+    top: 0px;
+    right: -6px;
+
+    font-size: 6px;
+  }
+}

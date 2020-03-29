@@ -1,0 +1,36 @@
+<div fxLayout="row wrap" class="section">
+  <div fxFlex="30%" fxFlex.xs="100%" ngClass.xs="xs" class="base">
+    <div class="date">
+      {{ experience.startDate | date: "MMM yyyy" }} -
+      {{
+        experience.endDate ? (experience.endDate | date: "MMM yyyy") : "Present"
+      }}
+    </div>
+    <div class="location">
+      <i class="fas fa-map-marker-alt"></i> {{ experience.location }}
+    </div>
+  </div>
+  <div fxFlex="70%" fxFlex.xs="100%" class="detail">
+    <div class="title">
+      {{ experience.title }}
+    </div>
+    <div class="company">
+      {{ experience.company }}
+    </div>
+    <div fxLaout="column" *ngFor="let key of experience.keys" class="key">
+      <i class="fas fa-circle"></i>
+      <div class="description">
+        {{ key.description }}
+      </div>
+      <div
+        *ngIf="key.additionalInfos && key.additionalInfos.length > 0"
+        class="additional-infos"
+      >
+        <app-technology
+          *ngFor="let technology of key.additionalInfos"
+          [technology]="technology"
+        ></app-technology>
+      </div>
+    </div>
+  </div>
+</div>

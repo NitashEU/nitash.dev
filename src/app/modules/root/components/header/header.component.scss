@@ -1,0 +1,131 @@
+:host {
+  > .top {
+    margin-bottom: 12px;
+
+    > .left {
+      > .me {
+        width: 96px;
+        height: 96px;
+
+        > img {
+          width: 96px;
+          height: 96px;
+
+          object-fit: cover;
+          object-position: top;
+          border-radius: 100%;
+        }
+      }
+
+      > .links {
+        margin-left: 12px;
+        font-size: 28px;
+
+        &.xs {
+          margin: 0;
+        }
+
+        > a {
+          color: rgba(white, 0.8);
+          outline: none;
+          text-decoration: none;
+          height: 28px;
+
+          &:hover {
+            color: white;
+          }
+
+          > i {
+            height: 28px;
+          }
+        }
+      }
+    }
+
+    > .title {
+      &.xs {
+        margin-top: 12px;
+      }
+
+      > .name {
+        font-size: 36px;
+        line-height: 24px;
+        letter-spacing: 6px;
+      }
+
+      > .position {
+        font-size: 18px;
+        letter-spacing: 6px;
+
+        &.xs {
+          letter-spacing: initial;
+        }
+
+        > i {
+          color: #b6332b;
+        }
+      }
+    }
+  }
+
+  > .navbar {
+    position: relative;
+
+    /*&:before {
+      content: "";
+      position: absolute;
+      background: inherit;
+      box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 0.01);
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }*/
+
+    > a {
+      position: relative;
+
+      outline: none;
+      text-decoration: none;
+
+      height: 38px;
+      width: 92px;
+
+      color: inherit;
+      font-size: 24px;
+
+      &.active {
+        &:before {
+          content: "";
+          position: absolute;
+          background: inherit;
+          box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 0.05);
+          z-index: -1;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+
+        border-top: 1px solid #4d545c;
+        border-right: 1px solid #4d545c;
+        border-left: 1px solid #4d545c;
+      }
+
+      &:not(.active):hover {
+        &:before {
+          content: "";
+          position: absolute;
+          background: inherit;
+          box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 0.02);
+          z-index: -1;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

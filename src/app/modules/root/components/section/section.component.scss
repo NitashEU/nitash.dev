@@ -1,0 +1,74 @@
+:host {
+  > .section {
+
+    > .base {
+      &.xs {
+        margin-bottom: 12px;
+      }
+
+      > .date {
+        color: rgba(white, 0.9);
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      > .location {
+        color: rgba(white, 0.7);
+        font-size: 12px;
+        line-height: 12px;
+
+        > i {
+          margin-right: 4px;
+        }
+      }
+    }
+
+    > .detail {
+      > .title {
+        font-size: 24px;
+        line-height: 24px;
+      }
+
+      > .company {
+        font-size: 12px;
+        line-height: 12px;
+        color: rgba(white, 0.4);
+      }
+
+      > .key {
+        position: relative;
+        margin-top: 24px;
+
+        > i {
+          position: absolute;
+          top: 50%;
+          left: -14px;
+          transform: translateY(-50%);
+          font-size: 4px;
+        }
+
+        > .description {
+          color: rgba(white, 0.9);
+          line-height: 14px;
+        }
+
+        > .additional-infos {
+          position: absolute;
+          top: -20px;
+          left: 0;
+
+          > app-technology {
+            margin-right: 8px;
+
+            font-size: 10px;
+            color: rgba(white, 0.4);
+
+            &:hover {
+              color: rgba(white, 0.6);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  nitash_de:
+    container_name: nitash_de_container
+    image: nitash_de_image
+    restart: unless-stopped
+    environment:
+      VIRTUAL_HOST: nitash.de,www.nitash.de,nitash.dev,www.nitash.dev
+      LETSENCRYPT_HOST: nitash.de,www.nitash.de,nitash.dev,www.nitash.dev
+      LETSENCRYPT_EMAIL: fs@nitash.de
+
+networks:
+  default:
+    external:
+      name: webproxy
