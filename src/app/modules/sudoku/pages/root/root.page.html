@@ -1,9 +1,0 @@
-<div fxLayout="row wrap" class="sudoku">
-  <div
-    *ngFor="let cell of sudokuMatrix; let i = index;"
-    fxLayoutAlign="center center"
-    [ngClass]="getCellClass(i)"
-  >
-    {{cell}}
-  </div>
-</div>

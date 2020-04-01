@@ -1,7 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MediaObserver } from '@angular/flex-layout';
 
-@Injectable()
-export class ConstantsService {
+@Component({
+  selector: 'app-cv-technology',
+  templateUrl: './technology.component.html',
+  styleUrls: ['./technology.component.scss']
+})
+export class CVTechnologyComponent {
+  @Input()
+  public technology: string;
+
   public technologyWebsiteMap = {
     NestJS: 'https://nestjs.com/',
     'Azure DevOps': 'https://dev.azure.com',
@@ -17,4 +25,6 @@ export class ConstantsService {
       'https://docs.microsoft.com/de-de/aspnet/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api',
     Jenkins: 'https://jenkins.io/'
   };
+
+  public constructor(public media: MediaObserver) {}
 }

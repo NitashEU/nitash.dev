@@ -26,10 +26,10 @@
         *ngIf="key.additionalInfos && key.additionalInfos.length > 0"
         class="additional-infos"
       >
-        <app-technology
+        <app-cv-technology
           *ngFor="let technology of key.additionalInfos"
           [technology]="technology"
-        ></app-technology>
+        ></app-cv-technology>
       </div>
     </div>
   </div>

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { CVModule } from '../cv/cv.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { Ng5SliderModule } from '../ng5-slider/slider.module';
@@ -10,10 +11,8 @@ import { RootCVComponent } from './pages/cv/cv.page';
 import { RootHeaderComponent } from './components/header/header.component';
 import { RootOverviewComponent } from './pages/overview/overview.page';
 import { RootRootComponent } from './pages/root/root.page';
-import { RootSectionComponent } from './components/section/section.component';
 import { RootSortingVisualiserComponent } from './pages/sorting-visualiser/sorting-visualiser.page';
 import { RouterModule } from '@angular/router';
-import { SharedModule } from '../shared/shared.module';
 import { SortingVisualiserModule } from '../sorting-visualiser/sorting-visualiser.module';
 
 @NgModule({
@@ -25,8 +24,8 @@ import { SortingVisualiserModule } from '../sorting-visualiser/sorting-visualise
     FormsModule,
     FlexLayoutModule,
     RouterModule,
-    SharedModule,
 
+    CVModule,
     SortingVisualiserModule
   ],
   declarations: [
@@ -38,8 +37,7 @@ import { SortingVisualiserModule } from '../sorting-visualiser/sorting-visualise
 
     // Components
     RootCardComponent,
-    RootHeaderComponent,
-    RootSectionComponent
+    RootHeaderComponent
   ],
   exports: [],
   providers: []
