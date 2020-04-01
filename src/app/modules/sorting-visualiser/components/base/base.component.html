@@ -1,0 +1,17 @@
+<div fxLayout="row" fxLayoutAlign="space-between end" class="array">
+  <div
+    *ngFor="let value of values; let i = index"
+    [fxFlex]="valueWidth"
+    [ngStyle]="{
+      height: (500 / values.length) * value + 'px',
+      'max-width': valueWidth
+    }"
+    [ngClass]="{
+      value: true,
+      green: sortingResult.green && sortingResult.green[i],
+      red: sortingResult.red && sortingResult.red[i],
+      white: sortingResult.white && sortingResult.white[i]
+    }"
+    class="value"
+  ></div>
+</div>

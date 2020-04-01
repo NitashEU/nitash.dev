@@ -1,9 +1,11 @@
-<div *ngIf="!media.isActive('xs')" id="stars"></div>
-<div *ngIf="!media.isActive('xs')" id="stars2"></div>
-<div *ngIf="!media.isActive('xs')" id="stars3"></div>
-<div ngClass.xs="xs" class="container header">
-  <app-root-header></app-root-header>
-</div>
-<div ngClass.xs="xs" class="container">
-  <router-outlet></router-outlet>
+<div ngClass.xs="xs" class="body">
+  <div *ngIf="!media.isActive('xs')" id="stars"></div>
+  <div *ngIf="!media.isActive('xs')" id="stars2"></div>
+  <div *ngIf="!media.isActive('xs')" id="stars3"></div>
+  <app-root-card ngClass.xs="xs" class="header">
+    <app-root-header></app-root-header>
+  </app-root-card>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
 </div>

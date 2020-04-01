@@ -1,0 +1,36 @@
+:host {
+  > app-root-card {
+    > .actions {
+      margin-bottom: 24px;
+
+      > * {
+        margin-bottom: 12px !important;
+      }
+
+      > .slider {
+        position: relative;
+
+        > div {
+          position: absolute;
+          top: -5px;
+        }
+
+        > ng5-slider {
+          margin: 26px 0 0 0;
+        }
+
+        &.left {
+          margin: 0 16px;
+        }
+
+        &.right {
+          margin: 0 16px 0 0;
+        }
+
+        &.xs {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

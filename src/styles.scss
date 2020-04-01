@@ -1,10 +1,165 @@
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
 /* You can add global styles to this file, and also import other style files */
 
 html,
 body {
+  min-width: 375px;
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
   box-sizing: border-box;
+}
+
+a {
+  &.icon {
+    text-decoration: none;
+    outline: none;
+    color: rgba(white, 0.8);
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+
+  &.icon {
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 6px;
+
+    background-color: rgba(white, 0.8);
+
+    &:hover {
+      background-color: white;
+    }
+
+    &:disabled {
+      cursor: progress;
+      background-color: rgba(white, 0.6);
+    }
+
+    > i {
+      font-size: 24px;
+      border-radius: 6px;
+    }
+  }
+}
+
+ng-select {
+  &:not(.ng-select-disabled):hover {
+    > .ng-select-container {
+      background-color: white !important;
+    }
+  }
+  &.ng-select-disabled {
+    > .ng-select-container {
+      background-color: rgba(white, 0.6) !important;
+    }
+  }
+
+  .ng-select-container {
+    cursor: pointer;
+
+    background-color: rgba(white, 0.8) !important;
+    color: black;
+    border: none !important;
+  }
+
+  ng-dropdown-panel {
+    background-color: transparent !important;
+  }
+
+  .ng-option {
+    background-color: rgba(white, 0.8) !important;
+
+    &:not(.ng-option-selected):hover {
+      background-color: rgba(white, 0.9) !important;
+    }
+  }
+
+  .ng-option-selected {
+    background: white !important;
+  }
+}
+
+.ng5-slider {
+  &[disabled] {
+    cursor: default;
+
+    * {
+      cursor: default !important;
+    }
+
+    .ng5-slider-pointer {
+      width: 16px !important;
+      height: 16px !important;
+      top: -7px !important;
+
+      background-color: rgba(209, 209, 209, 0.8) !important;
+
+      &:hover {
+        background-color: rgba(209, 209, 209, 0.8) !important;
+      }
+
+      &::after {
+        width: 6px !important;
+        height: 6px !important;
+        top: 5px !important;
+        left: 5px !important;
+
+        background-color: rgba(#4d545c, 0.8) !important;
+      }
+    }
+
+    .ng5-slider-bar {
+      background: inherit !important;
+      box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 0.05);
+    }
+
+    .ng5-slider-selection {
+      background-color: rgba(white, 0.6) !important;
+    }
+  }
+
+  .ng5-slider-pointer {
+    width: 16px !important;
+    height: 16px !important;
+    top: -7px !important;
+
+    background-color: rgb(209, 209, 209) !important;
+
+    &:hover {
+      background-color: white !important;
+    }
+
+    &::after {
+      width: 6px !important;
+      height: 6px !important;
+      top: 5px !important;
+      left: 5px !important;
+
+      background-color: #4d545c !important;
+    }
+  }
+
+  .ng5-slider-bar {
+    background: inherit !important;
+    box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 0.2);
+  }
+
+  .ng5-slider-selection {
+    background-color: rgba(white, 0.8) !important;
+  }
 }

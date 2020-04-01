@@ -1,0 +1,57 @@
+<app-root-card [showHeader]="true" title="Sorting Visualiser">
+  <div
+    *ngIf="sortingVisualiser"
+    fxLayout="row wrap"
+    fxLayoutAlign="space-between start"
+    fxLayoutAlign.xs="end start"
+    class="actions"
+  >
+    <ng-select
+      fxFlex="200px"
+      fxFlex.xs="100%"
+      [disabled]="sortingVisualiser.sorting"
+      [(ngModel)]="selectedSortService"
+      [items]="sortingVisualiser.availableSortServices"
+      [clearable]="false"
+      [searchable]="false"
+      bindLabel="name"
+    >
+    </ng-select>
+    <div fxFlex fxFlex.xs="100%" ngClass.xs="xs" class="slider left">
+      <div>Speed</div>
+      <ng5-slider
+        [(value)]="sortingVisualiser.speed"
+        [options]="speedSliderOptions"
+      ></ng5-slider>
+    </div>
+    <div fxFlex fxFlex.xs="100%" ngClass.xs="xs" class="slider right">
+      <div>Size</div>
+      <ng5-slider
+        [(value)]="sortingVisualiser.size"
+        (valueChange)="sortingVisualiser.generateArray()"
+        [options]="sizeSliderOptions"
+        [manualRefreshWithOptions]="manualRefreshWithOptionsEventEmitter"
+      ></ng5-slider>
+    </div>
+    <div fxFlex="80px" fxLayoutAlign="space-between center">
+      <button
+        [disabled]="sortingVisualiser.sorting"
+        (click)="sortingVisualiser.generateArray()"
+        class="icon"
+      >
+        <i class="fas fa-retweet"></i>
+      </button>
+      <button
+        [disabled]="sortingVisualiser?.sorting"
+        (click)="sort()"
+        class="icon"
+      >
+        <i class="fas fa-sort-amount-down-alt fa-rotate-270"></i>
+      </button>
+    </div>
+  </div>
+  <app-sorting-visualiser-base
+    #sortingVisualiser
+    (sorted)="toggleSizeSliderOption(false)"
+  ></app-sorting-visualiser-base>
+</app-root-card>

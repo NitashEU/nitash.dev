@@ -1,0 +1,19 @@
+:host {
+  > .array {
+    > .value {
+      background-color: black;
+
+      &.green {
+        background-color: green;
+      }
+
+      &.red {
+        background-color: red;
+      }
+
+      &.white {
+        background-color: white;
+      }
+    }
+  }
+}

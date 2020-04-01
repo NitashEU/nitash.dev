@@ -1,0 +1,38 @@
+:host {
+  > div {
+    > a {
+      text-decoration: none;
+      outline: none;
+      color: inherit;
+      height: 224px;
+      font-size: 22px;
+      text-transform: uppercase;
+      text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+
+      // transition: letter-spacing 1s ease-out;
+
+      &:hover {
+        // letter-spacing: 2px;
+
+        > app-root-card {
+          > div {
+            transform: scale(1.4);
+          }
+        }
+      }
+
+      > app-root-card {
+        height: 100%;
+        margin: 0;
+
+        > div {
+          transition: transform 1s ease;
+        }
+      }
+
+      &.xs {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

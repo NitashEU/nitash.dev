@@ -1,6 +1,9 @@
-<div ngClass.xs="xs" class="body">
-  <app-root-section
-    *ngFor="let experience of experiences"
-    [experience]="experience"
-  ></app-root-section>
-</div>
+<app-root-card [showHeader]="true" title="Resume" github="">
+  <div ngClass.xs="xs" class="body">
+    <app-root-section
+      *ngFor="let experience of experiences"
+      [experience]="experience"
+    >
+    </app-root-section>
+  </div>
+</app-root-card>

@@ -26,14 +26,7 @@
         }
 
         > a {
-          color: rgba(white, 0.8);
-          outline: none;
-          text-decoration: none;
           height: 28px;
-
-          &:hover {
-            color: white;
-          }
 
           > i {
             height: 28px;
@@ -51,6 +44,10 @@
         font-size: 36px;
         line-height: 24px;
         letter-spacing: 6px;
+
+        &.xs {
+          font-size: 34px;
+        }
       }
 
       > .position {
