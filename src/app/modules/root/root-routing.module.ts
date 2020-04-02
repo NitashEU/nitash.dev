@@ -1,4 +1,5 @@
 import { RootCVComponent } from './pages/cv/cv.page';
+import { RootMazeGenerationVisualiserComponent } from './pages/maze-generation-visualiser/maze-generation-visualiser.component';
 import { RootOverviewComponent } from './pages/overview/overview.page';
 import { RootRootComponent } from './pages/root/root.page';
 import { RootSortingVisualiserComponent } from './pages/sorting-visualiser/sorting-visualiser.page';
@@ -19,6 +20,10 @@ export const rootRoute: Route = {
     {
       path: 'sorting-visualiser',
       component: RootSortingVisualiserComponent
+    },
+    {
+      path: 'maze-generation-visualiser',
+      component: RootMazeGenerationVisualiserComponent
     },
     {
       path: '**',

@@ -1,18 +1,27 @@
 <div fxLayout="row wrap" fxLayoutAlign="space-between center">
-  <a fxFlex="49%" fxFlex.xs="100%" ngClass.xs="xs" class="cv" routerLink="/cv">
+  <a fxFlex="32%" fxFlex.xs="100%" ngClass.xs="xs" routerLink="/cv">
     <app-root-card fxLayoutAlign="center center">
       <div>Resume</div>
     </app-root-card>
   </a>
   <a
-    fxFlex="49%"
+    fxFlex="32%"
     fxFlex.xs="100%"
     ngClass.xs="xs"
-    class="sorting-visualiser"
     routerLink="/sorting-visualiser"
   >
     <app-root-card fxLayoutAlign="center center">
       <div>Sorting Visualiser</div>
+    </app-root-card>
+  </a>
+  <a
+    fxFlex="32%"
+    fxFlex.xs="100%"
+    ngClass.xs="xs"
+    routerLink="/maze-generation-visualiser"
+  >
+    <app-root-card fxLayoutAlign="center center">
+      <div>Maze Generation Visualiser</div>
     </app-root-card>
   </a>
 </div>

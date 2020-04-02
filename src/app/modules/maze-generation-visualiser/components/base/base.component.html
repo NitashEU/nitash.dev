@@ -1,0 +1,14 @@
+MAZE GENERATION VISUALISER
+
+<div fxLayout="row wrap" class="maze">
+  <ng-container *ngFor="let row of rows; let i = index">
+    <app-maze-generation-visualiser-cell
+      *ngFor="let column of columns; let j = index"
+      fxFlex="calc(100% / {{ rows.length }})"
+      [ngStyle]="{
+        'padding-top': 'calc(100% / ' + rows.length + ')'
+      }"
+      class="cell"
+    ></app-maze-generation-visualiser-cell>
+  </ng-container>
+</div>

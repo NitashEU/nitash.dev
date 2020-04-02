@@ -19,16 +19,29 @@
       [clearable]="false"
       [searchable]="false"
       bindLabel="name"
+      title="Algorithm"
     >
     </ng-select>
-    <div fxFlex fxFlex.xs="100%" ngClass.xs="xs" class="slider left">
+    <div
+      fxFlex
+      fxFlex.xs="100%"
+      ngClass.xs="xs"
+      class="slider left"
+      title="Speed"
+    >
       <div>Speed</div>
       <ng5-slider
         [(value)]="sortingVisualiser.speed"
         [options]="speedSliderOptions"
       ></ng5-slider>
     </div>
-    <div fxFlex fxFlex.xs="100%" ngClass.xs="xs" class="slider right">
+    <div
+      fxFlex
+      fxFlex.xs="100%"
+      ngClass.xs="xs"
+      class="slider right"
+      title="Size"
+    >
       <div>Size</div>
       <ng5-slider
         [(value)]="sortingVisualiser.size"
@@ -42,6 +55,7 @@
         [disabled]="sortingVisualiser.sorting"
         (click)="sortingVisualiser.generateArray()"
         class="icon"
+        title="Generate Array"
       >
         <i class="fas fa-retweet"></i>
       </button>
@@ -49,6 +63,7 @@
         [disabled]="sortingVisualiser?.sorting"
         (click)="sort()"
         class="icon"
+        title="Sort"
       >
         <i class="fas fa-sort-amount-down-alt fa-rotate-270"></i>
       </button>

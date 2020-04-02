@@ -1,9 +1,15 @@
 <div *ngIf="showHeader" fxLayoutAlign="space-between center" class="header">
-  <a fxLayoutAlign="center center" routerLink="/" class="icon">
-    <i class="fas fa-th"></i>
+  <a fxLayoutAlign="center center" routerLink="/" class="icon" title="Back">
+    <i class="fas fa-chevron-left"></i>
   </a>
-  <div ngClass.xs="xs">{{ title }}</div>
-  <a fxLayoutAlign="center center" [href]="github" target="_blank" class="icon">
+  <div fxLayoutAlign="center center" ngClass.xs="xs">{{ title }}</div>
+  <a
+    fxLayoutAlign="center center"
+    [href]="github"
+    target="_blank"
+    class="icon"
+    title="Github"
+  >
     <i class="fab fa-github-square"></i>
   </a>
 </div>
